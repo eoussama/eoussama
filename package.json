@@ -1,0 +1,21 @@
+{
+  "name": "eoussama",
+  "type": "module",
+  "version": "0.2.0",
+  "private": true,
+  "packageManager": "pnpm@12.15.0",
+  "description": "Oussama Essamadi's GitHub profile README, and the script that keeps its Writings list current.",
+  "author": "eoussama",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "lint": "dx lint",
+    "fix": "dx fix",
+    "check": "pnpm install --frozen-lockfile && pnpm audit && pnpm lint",
+    "writings": "node .github/scripts/writings.mjs"
+  },
+  "devDependencies": {
+    "@eoussama/dx": "^0.1.3"
+  }
+}

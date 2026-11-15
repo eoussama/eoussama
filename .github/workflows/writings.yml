@@ -1,0 +1,58 @@
+name: Writings
+
+# Refreshes the README's Writings list from ouss.es/p/rss.xml.
+on:
+  # On every push to this repository.
+  push:
+    branches: [master]
+  # Weekly, on Mondays, after the portfolio's own weekly rebuild (05:17 UTC).
+  schedule:
+    - cron: "0 6 * * 1"
+  # From the "Run workflow" button in the Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: writings
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm (the version in package.json)
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node (the version in .nvmrc)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      # Nothing is written to the README unless the script passes lint.
+      - name: Lint
+        run: pnpm lint
+
+      - name: Update the Writings list
+        run: pnpm writings README.md
+
+      # A commit made with the workflow's own token does not trigger another run.
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update writings"
+          git push
