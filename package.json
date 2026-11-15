@@ -1,7 +1,7 @@
 {
   "name": "eoussama",
   "type": "module",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "packageManager": "pnpm@12.15.0",
   "description": "Oussama Essamadi's GitHub profile README, and the script that keeps its Writings list current.",
