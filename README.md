@@ -28,10 +28,10 @@
 </a>
 
 <a href="https://ouss.es"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[ouss.es](https://ouss.es), my portfolio.\
-<a href="https://to.ouss.es/in"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[linkedin.com/in/eoussama](https://to.ouss.es/in), my work history.\
+<a href="https://to.ouss.es/in"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[to.ouss.es/in](https://to.ouss.es/in), my work history.\
 <a href="https://to.ouss.es/behance"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[Behance](https://to.ouss.es/behance), [Dribbble](https://to.ouss.es/dribbble) and [Figma](https://to.ouss.es/figma), my design work.\
 <a href="https://to.ouss.es/cv"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;Read [my CV](https://to.ouss.es/cv) or [download it](https://to.ouss.es/resume), and [catch up](https://to.ouss.es/now) with me.\
-<a href="mailto:oussama.essamadi@gmail.com"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[Write to me](mailto:oussama.essamadi@gmail.com) at oussama.essamadi@gmail.com.\
+<a href="https://to.ouss.es/mail"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[Write to me](https://to.ouss.es/mail) at hi@ouss.es.\
 <a href="https://to.ouss.es/sponsor"><img src="assets/dot-dia.svg" alt="" /></a>&ensp;[Sponsor me on GitHub](https://to.ouss.es/sponsor) or [tip me through PayPal](https://to.ouss.es/tip).
 
 <p align="right">
