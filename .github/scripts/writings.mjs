@@ -11,7 +11,8 @@ import process from "node:process";
 
 
 const FEED = "https://ouss.es/p/rss.xml";
-const ALL = "https://ouss.es/?list=posts";
+const ALL = "https://to.ouss.es/posts";
+const RSS = "https://to.ouss.es/rss";
 const SHOWN = 2;
 const FILE = process.argv[2] ?? "README.md";
 const START = "<!-- writings:start -->";
@@ -101,7 +102,7 @@ function line(post) {
  */
 function block(posts) {
   const all = posts.length === 1 ? "1 post" : `All ${posts.length} posts`;
-  const lines = [...posts.slice(0, SHOWN).map(line), `${dot(ALL)}[${all}](${ALL}), or follow them [by RSS](${FEED}).`];
+  const lines = [...posts.slice(0, SHOWN).map(line), `${dot(ALL)}[${all}](${ALL}), or follow them [by RSS](${RSS}).`];
 
   return `${START}\n${lines.join("\\\n")}\n${END}`;
 }
